@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+		<header class="header">
+			<div class="header__top card">
+				<div class="header__image">
+					<img src="./images/image-jeremy.png" alt="Jeremy's profile picture">
+				</div>
+				<h1 class="header__title">
+					Report for <em>Jeremy Robson</em>
+				</h1>
+			</div>
+			<div class="header__tabs card" role="tablist">
+				<button role="tab" class="header__tab" tabindex="-1">
+					Daily
+				</button>
+				<button role="tab" class="header__tab" tabindex="0" aria-selected="true">
+					Weekly
+				</button>
+				<button role="tab" class="header__tab" tabindex="-1">
+					Monthly
+				</button>
+			</div>
+		</header>
+		<main>
+			<section data-timeframe="weekly" class="status" role="tabpanel">
+				<h2 class="sr-only status__title">
+					Weekly status
+				</h2>
+				<div class="status-fetching">
+					<p class="status-fetching__text sr-only" aria-live="polite">
+						Fetching data
+					</p>
+				</div>
+				<div class="status-cards" role="tabpanel">
+					<article class="status-card status-card--work" tabindex="0">
+						<div class="status-card__wrapper card">
+							<div class="status-card__header">
+								<h3 class="status-card__title">
+									Work
+								</h3>
+								<button class="status-card__toggle" aria-label="Expand summary" aria-expanded="false"
+									aria-haspopup="true">
+									<svg aria-hidden="true" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+											fill="#BBC0FF" fill-rule="evenodd" />
+									</svg>
+								</button>
+							</div>
+							<div class="status-card__body">
+								<div class="status-card__this-week">
+									<h3 class="sr-only status-card__label-this">
+										This week
+									</h3>
+									<p class="status-card__duration">
+										<span class="status-card__duration-value">
+											120
+										</span>
+										<span class="status-card__duration-label" aria-hidden="true">
+											hrs
+										</span>
+										<span class="sr-only">
+											hours
+										</span>
+									</p>
+								</div>
+								<div class="status-card__last-week">
+									<h3 class="status-card__label status-card__label-last">
+										Last week
+									</h3>
+									<p class="status-card__duration">
+										<span class="status-card__duration-value">
+											45
+										</span>
+										<span class="status-card__duration-label" aria-hidden="true">
+											hrs
+										</span>
+										<span class="sr-only">
+											hours
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="status-card status-card--play" tabindex="0">
+						<div class="status-card__wrapper card">
+							<div class="status-card__header">
+								<h3 class="status-card__title">
+									Play
+								</h3>
+								<button class="status-card__toggle" aria-label="Expand summary" aria-expanded="false"
+									aria-haspopup="true">
+									<svg aria-hidden="true" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+											fill="#BBC0FF" fill-rule="evenodd" />
+									</svg>
+								</button>
+							</div>
+							<div class="status-card__body">
+								<div class="status-card__this-week">
+									<h3 class="sr-only status-card__label-this">
+										This week
+									</h3>
+									<p class="status-card__duration">
+										<span class="status-card__duration-value">
+											30
+										</span>
+										<span class="status-card__duration-label" aria-hidden="true">
+											hrs
+										</span>
+										<span class="sr-only">
+											hours
+										</span>
+									</p>
+								</div>
+								<div class="status-card__last-week">
+									<h3 class="status-card__label status-card__label-last">
+										Last week
+									</h3>
+									<p class="status-card__duration">
+										<span class="status-card__duration-value">
+											23
+										</span>
+										<span class="status-card__duration-label" aria-hidden="true">
+											hrs
+										</span>
+										<span class="sr-only">
+											hours
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="status-card status-card--study" tabindex="0">
+						<div class="status-card__wrapper card">
+							<div class="status-card__header">
+								<h3 class="status-card__title">
+									Study
+								</h3>
+								<button class="status-card__toggle" aria-label="Expand summary" aria-expanded="false"
+									aria-haspopup="true">
+									<svg aria-hidden="true" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+											fill="#BBC0FF" fill-rule="evenodd" />
+									</svg>
+								</button>
+							</div>
+							<div class="status-card__body">
+								<div class="status-card__this-week">
+									<h3 class="sr-only status-card__label-this">
+										This week
+									</h3>
+									<p class="status-card__duration">
+										<span class="status-card__duration-value">
+											4
+										</span>
+										<span class="status-card__duration-label" aria-hidden="true">
+											hrs
+										</span>
+										<span class="sr-only">
+											hours
+										</span>
+									</p>
+								</div>
+								<div class="status-card__last-week">
+									<h3 class="status-card__label status-card__label-last">
+										Last week
+									</h3>
+									<p class="status-card__duration">
+										<span class="status-card__duration-value">
+											7
+										</span>
+										<span class="status-card__duration-label" aria-hidden="true">
+											hrs
+										</span>
+										<span class="sr-only">
+											hours
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="status-card status-card--exercise" tabindex="0">
+						<div class="status-card__wrapper card">
+							<div class="status-card__header">
+								<h3 class="status-card__title">
+									Exercise
+								</h3>
+								<button class="status-card__toggle" aria-label="Expand summary" aria-expanded="false"
+									aria-haspopup="true">
+									<svg aria-hidden="true" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+											fill="#BBC0FF" fill-rule="evenodd" />
+									</svg>
+								</button>
+							</div>
+							<div class="status-card__body">
+								<div class="status-card__this-week">
+									<h3 class="sr-only status-card__label-this">
+										This week
+									</h3>
+									<p class="status-card__duration">
+										<span class="status-card__duration-value">
+											4
+										</span>
+										<span class="status-card__duration-label" aria-hidden="true">
+											hrs
+										</span>
+										<span class="sr-only">
+											hours
+										</span>
+									</p>
+								</div>
+								<div class="status-card__last-week">
+									<h3 class="status-card__label status-card__label-last">
+										Last week
+									</h3>
+									<p class="status-card__duration">
+										<span class="status-card__duration-value">
+											5
+										</span>
+										<span class="status-card__duration-label" aria-hidden="true">
+											hrs
+										</span>
+										<span class="sr-only">
+											hours
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="status-card status-card--social" tabindex="0">
+						<div class="status-card__wrapper card">
+							<div class="status-card__header">
+								<h3 class="status-card__title">
+									Social
+								</h3>
+								<button class="status-card__toggle" aria-label="Expand summary" aria-expanded="false"
+									aria-haspopup="true">
+									<svg aria-hidden="true" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+											fill="#BBC0FF" fill-rule="evenodd" />
+									</svg>
+								</button>
+							</div>
+							<div class="status-card__body">
+								<div class="status-card__this-week">
+									<h3 class="sr-only status-card__label-this">
+										This week
+									</h3>
+									<p class="status-card__duration">
+										<span class="status-card__duration-value">
+											5
+										</span>
+										<span class="status-card__duration-label" aria-hidden="true">
+											hrs
+										</span>
+										<span class="sr-only">
+											hours
+										</span>
+									</p>
+								</div>
+								<div class="status-card__last-week">
+									<h3 class="status-card__label status-card__label-last">
+										Last week
+									</h3>
+									<p class="status-card__duration">
+										<span class="status-card__duration-value">
+											10
+										</span>
+										<span class="status-card__duration-label" aria-hidden="true">
+											hrs
+										</span>
+										<span class="sr-only">
+											hours
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="status-card status-card--self-care" tabindex="0">
+						<div class="status-card__wrapper card">
+							<div class="status-card__header">
+								<h3 class="status-card__title">
+									Self care
+								</h3>
+								<button class="status-card__toggle" aria-label="Expand summary" aria-expanded="false"
+									aria-haspopup="true">
+									<svg aria-hidden="true" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+											fill="#BBC0FF" fill-rule="evenodd" />
+									</svg>
+								</button>
+							</div>
+							<div class="status-card__body">
+								<div class="status-card__this-week">
+									<h3 class="sr-only status-card__label-this">
+										This week
+									</h3>
+									<p class="status-card__duration">
+										<span class="status-card__duration-value">
+											2
+										</span>
+										<span class="status-card__duration-label" aria-hidden="true">
+											hrs
+										</span>
+										<span class="sr-only">
+											hours
+										</span>
+									</p>
+								</div>
+								<div class="status-card__last-week">
+									<h3 class="status-card__label status-card__label-last">
+										Last week
+									</h3>
+									<p class="status-card__duration">
+										<span class="status-card__duration-value">
+											2
+										</span>
+										<span class="status-card__duration-label" aria-hidden="true">
+											hrs
+										</span>
+										<span class="sr-only">
+											hours
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</article>
+				</div>
+			</section>
+		</main>
+	</div>
+</body>
+</html>
