@@ -166,32 +166,51 @@ button {
 .status-card--work::before {
   background-image: url("./images/icon-work.svg");
   background-color: #ff8c66;
+  height:20px;
+  margin-top:-3em;
+  top:-3px;
   
 }
 
 .status-card--play::before {
   background-image: url("./images/icon-play.svg");
   background-color: #56c2e6;
+  height:20px;
+  margin-top:-3em;
+  top:-3px;
 }
 
 .status-card--study::before {
   background-image: url("./images/icon-study.svg");
   background-color: #ff5c7c;
+  height:20px;
+  margin-top:-3em;
+  top:-3px;
 }
 
 .status-card--exercise::before {
   background-image: url("./images/icon-exercise.svg");
   background-color: #4acf81;
+  height:20px;
+  margin-top:-3em;
+  top:-3px;
 }
 
 .status-card--social::before {
   background-image: url("./images/icon-social.svg");
   background-color: #7536d3;
+  height:20px;
+  margin-top:-3em;
+  top:-3px;
 }
 
 .status-card--self-care::before {
   background-image: url("./images/icon-self-care.svg");
   background-color: #f1c65b;
+  height:20px;
+  margin-top:-3em;
+  top:-3px;
+  
 }
 
 .status-card__header {
